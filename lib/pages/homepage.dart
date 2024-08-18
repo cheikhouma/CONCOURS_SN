@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// IGNORE_FOR_FILE: PREFER_CONST_CONSTRUCTORS
 
 import 'package:flutter/material.dart';
 import 'package:ept/pages/infosdev.dart';
@@ -35,66 +35,86 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         actions: [
           IconButton(
-            icon: Icon(Icons.info),
+            icon: const Icon(Icons.info),
             onPressed: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => InfosDev()),
+                MaterialPageRoute(builder: (context) => const InfosDev()),
               )
             },
-            color: Colors.black,
+            color: Colors.white,
             iconSize: 30,
           ),
         ],
-        title: Center(
+        title: const Center(
           child: Text(
             "ÉPREUVES CONCOURS EPT",
             style: TextStyle(
               fontFamily: "Poppins",
               fontSize: 27,
               fontWeight: FontWeight.w700,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ),
-        backgroundColor: Color.fromRGBO(221, 153, 57, 1),
+        backgroundColor: const Color.fromRGBO(221, 153, 57, 1),
       ),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 70.0, vertical: 20),
-        children: allDates.map(
-          (date) {
-            return ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                textStyle: TextStyle(
-                  color: Color.fromRGBO(221, 153, 57, 1),
-                  fontSize: 25,
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.bold,
-                  height: 1.5,
-                ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, // Number of items per row
+            mainAxisSpacing: 20.0, // Spacing between rows
+            crossAxisSpacing: 20.0, // Spacing between columns
+            childAspectRatio: 3 / 2, // Aspect ratio of the cards
+          ),
+          itemCount: allDates.length,
+          itemBuilder: (context, index) {
+            String date = allDates[index];
+            return Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
               ),
-              onPressed: () {
-                // Navigate to the PDF viewer page with the selected PDF file
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        PdfViewPage(pdfFileName: "assets/epreuves/$date.pdf"),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          PdfViewPage(pdfFileName: "assets/epreuves/$date.pdf"),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        const begin = Offset(1.0, 0.0);
+                        const end = Offset.zero;
+                        const curve = Curves.ease;
+
+                        var tween = Tween(begin: begin, end: end)
+                            .chain(CurveTween(curve: curve));
+
+                        return SlideTransition(
+                          position: animation.drive(tween),
+                          child: child,
+                        );
+                      },
+                    ),
+                  );
+                },
+                child: Center(
+                  child: Text(
+                    date,
+                    style: const TextStyle(
+                      fontFamily: "Poppins",
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                      color: Color.fromRGBO(194, 132, 40, 1),
+                    ),
                   ),
-                );
-              },
-              child: Text(
-                date,
-                style: TextStyle(
-                  color: Color.fromRGBO(221, 153, 57, 1),
-                  fontSize: 25,
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w400,
                 ),
               ),
             );
           },
-        ).toList(),
+        ),
       ),
     );
   }

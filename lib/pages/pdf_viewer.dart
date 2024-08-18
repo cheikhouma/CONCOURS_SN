@@ -39,8 +39,11 @@ class _PdfViewPageState extends State<PdfViewPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Epreuve de l\'année $date',
-          style: TextStyle(fontFamily: "Poppins", fontWeight: FontWeight.w500),
+          'Épreuve de l\'année $date',
+          style: TextStyle(
+              fontFamily: "Poppins",
+              fontWeight: FontWeight.w500,
+              color: Colors.white),
         ),
         backgroundColor: Color.fromRGBO(221, 153, 57, 1),
       ),
