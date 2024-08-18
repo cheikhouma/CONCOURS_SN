@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ept/homepage.dart';
+import 'package:ept/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

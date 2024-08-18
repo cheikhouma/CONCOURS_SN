@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ept/infosdev.dart';
-import 'package:ept/pdf_viewer.dart';
 import 'package:flutter/material.dart';
+import 'package:ept/pages/infosdev.dart';
+import 'package:ept/pages/pdf_viewer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -38,16 +38,17 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.info),
             onPressed: () => {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => InfosDev()))
+                context,
+                MaterialPageRoute(builder: (context) => InfosDev()),
+              )
             },
             color: Colors.black,
             iconSize: 30,
-            style: ButtonStyle(),
           ),
         ],
         title: Center(
           child: Text(
-            "Name of the App",
+            "ÉPREUVES CONCOURS EPT",
             style: TextStyle(
               fontFamily: "Poppins",
               fontSize: 27,
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        backgroundColor: Color.fromRGBO(221, 153, 51, 1),
+        backgroundColor: Color.fromRGBO(221, 153, 57, 1),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 70.0, vertical: 20),
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> {
             return ElevatedButton(
               style: ElevatedButton.styleFrom(
                 textStyle: TextStyle(
-                  color: Color.fromRGBO(194, 132, 40, 1),
+                  color: Color.fromRGBO(221, 153, 57, 1),
                   fontSize: 25,
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.bold,
@@ -73,18 +74,19 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               onPressed: () {
-                // Ouvrir le fichier PDF correspondant
+                // Navigate to the PDF viewer page with the selected PDF file
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PdfViewPage(pdfFileName: "$date.pdf"),
+                    builder: (context) =>
+                        PdfViewPage(pdfFileName: "assets/epreuves/$date.pdf"),
                   ),
                 );
               },
               child: Text(
                 date,
                 style: TextStyle(
-                  color: Color.fromRGBO(194, 132, 40, 1),
+                  color: Color.fromRGBO(221, 153, 57, 1),
                   fontSize: 25,
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w400,
