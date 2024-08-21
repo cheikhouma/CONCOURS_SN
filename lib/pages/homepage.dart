@@ -1,8 +1,9 @@
 // IGNORE_FOR_FILE: PREFER_CONST_CONSTRUCTORS
 
+import 'package:CONCOURS_SN/pages/constantes.dart';
 import 'package:flutter/material.dart';
-import 'package:ept/pages/infosdev.dart';
-import 'package:ept/pages/pdf_viewer.dart';
+import 'package:CONCOURS_SN/pages/infosdev.dart';
+import 'package:CONCOURS_SN/pages/pdf_viewer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,13 +52,13 @@ class _HomePageState extends State<HomePage> {
             "ÉPREUVES CONCOURS EPT",
             style: TextStyle(
               fontFamily: "Poppins",
-              fontSize: 27,
+              fontSize: 20,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
           ),
         ),
-        backgroundColor: const Color.fromRGBO(221, 153, 57, 1),
+        backgroundColor: Color.fromRGBO(127, 23, 52, 1),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
@@ -107,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                       fontFamily: "Poppins",
                       fontSize: 22,
                       fontWeight: FontWeight.w600,
-                      color: Color.fromRGBO(194, 132, 40, 1),
+                      color: Color.fromRGBO(127, 23, 52, 1),
                     ),
                   ),
                 ),

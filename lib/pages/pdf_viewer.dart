@@ -45,10 +45,12 @@ class _PdfViewPageState extends State<PdfViewPage> {
               fontWeight: FontWeight.w500,
               color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(221, 153, 57, 1),
+        backgroundColor: Color.fromRGBO(127, 23, 52, 1),
       ),
       body: PdfView(
         controller: _pdfController,
+        scrollDirection: Axis.vertical,
+        backgroundDecoration: BoxDecoration(color: Colors.white),
       ),
     );
   }
