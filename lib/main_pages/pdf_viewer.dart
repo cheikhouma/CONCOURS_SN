@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:Concours_SN/main_pages/constantes.dart';
 import 'package:flutter/material.dart';
 import 'package:pdfx/pdfx.dart';
 
@@ -38,6 +39,12 @@ class _PdfViewPageState extends State<PdfViewPage> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: white), // Change color to black
+          onPressed: () {
+            Navigator.pop(context); // Navigate back to the previous page
+          },
+        ),
         title: Text(
           'Épreuve de l\'année $date',
           style: TextStyle(

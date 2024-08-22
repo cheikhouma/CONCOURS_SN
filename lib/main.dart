@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:CONCOURS_SN/pages/homepage.dart';
+import 'package:Concours_SN/main_pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

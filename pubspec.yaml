@@ -1,4 +1,4 @@
-name: CONCOURS_SN
+name: Concours_SN
 description: "A new Flutter project."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,7 +30,12 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/epreuves/
+    - assets/epreuves/entree/ept/
+    - assets/epreuves/entree/ensa/
+    - assets/epreuves/entree/esp/
+    - assets/epreuves/entree/ipsl/
+    - assets/epreuves/entree/pd/
+
 
   uses-material-design: true
 
