@@ -16,8 +16,8 @@ class ChoixEntree extends StatefulWidget {
 class _ChoixEntreeState extends State<ChoixEntree> {
   Map<String, String> allSchools = {
     'École Polytechnique de Thiés': 'ept',
-    'École Superieure Polytechnique': 'esp',
-    'École Nationale Superieure de l\'Agronomie': 'ensa',
+    'École Supérieure Polytechnique': 'esp',
+    'École Nationale Supérieure de l\'Agronomie': 'ensa',
     'Institut Polytechnique de Saint Louis': 'ipsl',
     'Polytech Diamniadio': 'pd'
   };
@@ -60,9 +60,9 @@ class _ChoixEntreeState extends State<ChoixEntree> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: allSchools.keys.map((school) {
             return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: SizedBox(
-                width: 400, // Set the desired uniform width here
+                width: 360, // Set the desired uniform width here
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: principale_color,
@@ -81,7 +81,7 @@ class _ChoixEntreeState extends State<ChoixEntree> {
                       school,
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 17,
                         fontFamily: 'Poppins',
                       ),
                     ),

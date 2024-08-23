@@ -1,5 +1,6 @@
 import 'package:Concours_SN/excellence_pages/cg/cg.dart';
 import 'package:Concours_SN/excellence_pages/jp/jp.dart';
+import 'package:Concours_SN/excellence_pages/lsed/lsed.dart';
 import 'package:Concours_SN/main_pages/constantes.dart';
 import 'package:flutter/material.dart';
 
@@ -14,12 +15,14 @@ class _ChoixExcellenceState extends State<ChoixExcellence> {
   Map<String, String> allConcours = {
     'Concours Général': 'cg',
     'Junior Polytech': 'jp',
+    'Lycée d\'Excellence Diourbel': 'lsed'
   };
 
   // Map abbreviations to widgets
   final Map<String, Widget> concoursWidgets = {
     'cg': const Home_CG(),
     'jp': const Home_JP(),
+    'lsed': const Home_LSED()
   };
 
   @override
@@ -39,7 +42,7 @@ class _ChoixExcellenceState extends State<ChoixExcellence> {
             "Concours d'Excellence",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 30,
+              fontSize: 25,
               fontFamily: 'Poppins',
               color: Colors.white,
             ),
@@ -53,7 +56,7 @@ class _ChoixExcellenceState extends State<ChoixExcellence> {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: SizedBox(
-                width: 400,
+                width: 360,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: principale_color,

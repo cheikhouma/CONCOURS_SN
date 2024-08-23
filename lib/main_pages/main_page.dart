@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 20.0),
               child: SizedBox(
-                width: 400,
+                width: 360,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: principale_color,
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                       school,
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 28,
+                        fontSize: 25,
                         fontFamily: 'Poppins',
                       ),
                     ),

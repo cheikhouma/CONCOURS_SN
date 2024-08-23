@@ -30,11 +30,22 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
+    # Assets des concours d'entree
     - assets/epreuves/entree/ept/
     - assets/epreuves/entree/ensa/
     - assets/epreuves/entree/esp/
     - assets/epreuves/entree/ipsl/
     - assets/epreuves/entree/pd/
+
+    # Assets des concours d'excellence
+    - assets/epreuves/excellence/excellence_diourbel/
+    - assets/epreuves/excellence/junior_polytech/terminale/physique/
+    - assets/epreuves/excellence/junior_polytech/terminale/maths/
+    - assets/epreuves/excellence/junior_polytech/terminale/cons_meca/
+
+    - assets/epreuves/excellence/junior_polytech/premiere/physique/
+    - assets/epreuves/excellence/junior_polytech/premiere/maths/
+    - assets/epreuves/excellence/junior_polytech/premiere/cons_meca/
 
 
   uses-material-design: true
