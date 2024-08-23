@@ -32,9 +32,10 @@ class _PdfViewPageState extends State<PdfViewPage> {
   @override
   Widget build(BuildContext context) {
     // Extract the date from the PDF file name
-    String date = widget.pdfFileName.replaceAll('.pdf', '');
-    date = date.substring(date.lastIndexOf('/') + 1); // Get the year part
 
+    RegExp regex = RegExp(r'.*_(.*)\.pdf$');
+    RegExpMatch? match = regex.firstMatch(widget.pdfFileName);
+    String date = match!.group(1)!;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -55,8 +56,12 @@ class _PdfViewPageState extends State<PdfViewPage> {
       ),
       body: PdfView(
         controller: _pdfController,
+        pageSnapping: false,
         scrollDirection: Axis.vertical,
         backgroundDecoration: const BoxDecoration(color: Colors.white),
+      ),
+      bottomNavigationBar: const BottomAppBar(
+        color: white,
       ),
     );
   }
