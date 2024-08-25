@@ -39,6 +39,8 @@ flutter:
 
     # Assets des concours d'excellence
     - assets/epreuves/excellence/excellence_diourbel/
+
+    # Pour Junior Polytech
     - assets/epreuves/excellence/junior_polytech/terminale/physique/
     - assets/epreuves/excellence/junior_polytech/terminale/maths/
     - assets/epreuves/excellence/junior_polytech/terminale/cons_meca/
@@ -47,6 +49,31 @@ flutter:
     - assets/epreuves/excellence/junior_polytech/premiere/maths/
     - assets/epreuves/excellence/junior_polytech/premiere/cons_meca/
 
+
+    # Pour Concours General
+
+    - assets/epreuves/excellence/concours_general/premiere/allemand/
+    - assets/epreuves/excellence/concours_general/premiere/anglais/
+    - assets/epreuves/excellence/concours_general/premiere/arabe/
+    - assets/epreuves/excellence/concours_general/premiere/citoyennete/
+    - assets/epreuves/excellence/concours_general/premiere/espagnol/
+    - assets/epreuves/excellence/concours_general/premiere/francais/
+    - assets/epreuves/excellence/concours_general/premiere/geographie/
+    - assets/epreuves/excellence/concours_general/premiere/grec/
+    - assets/epreuves/excellence/concours_general/premiere/histoire/
+    - assets/epreuves/excellence/concours_general/premiere/italien/
+    - assets/epreuves/excellence/concours_general/premiere/latin/
+    - assets/epreuves/excellence/concours_general/premiere/maths/
+    - assets/epreuves/excellence/concours_general/premiere/portugais/
+
+
+    - assets/epreuves/excellence/concours_general/terminale/citoyennete/
+    - assets/epreuves/excellence/concours_general/terminale/economie/
+    - assets/epreuves/excellence/concours_general/terminale/electronique/
+    - assets/epreuves/excellence/concours_general/terminale/geographie/
+    - assets/epreuves/excellence/concours_general/terminale/histoire/
+    - assets/epreuves/excellence/concours_general/terminale/islamiques/
+    - assets/epreuves/excellence/concours_general/terminale/maths/
 
   uses-material-design: true
 

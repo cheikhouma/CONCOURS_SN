@@ -38,6 +38,7 @@ class _PdfViewPageState extends State<PdfViewPage> {
     String date = match!.group(1)!;
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back,
               color: white), // Change color to black
@@ -46,7 +47,7 @@ class _PdfViewPageState extends State<PdfViewPage> {
           },
         ),
         title: Text(
-          'Épreuve de l\'année $date',
+          'Épreuve  $date',
           style: const TextStyle(
               fontFamily: "Poppins",
               fontWeight: FontWeight.w500,
