@@ -1,4 +1,4 @@
-import 'package:Concours_SN/excellence_pages/subjects_viewer.dart';
+import 'package:Concours_SN/viewer/subjects_viewer.dart';
 import 'package:Concours_SN/main_pages/constantes.dart';
 import 'package:flutter/material.dart';
 
