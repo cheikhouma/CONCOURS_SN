@@ -1,3 +1,5 @@
+import 'package:Concours_SN/excellence_pages/cg/cg_premiere.dart';
+import 'package:Concours_SN/excellence_pages/cg/cg_terminale.dart';
 import 'package:Concours_SN/main_pages/constantes.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +11,15 @@ class Home_CG extends StatefulWidget {
 }
 
 class _Home_CGState extends State<Home_CG> {
+  Map<String, String> allLevel = {
+    'Première': 'pre',
+    'Terminale': 'ter',
+  };
+  final Map<String, Widget> concoursWidgets = {
+    'pre': const Home_CG_Premiere(),
+    'ter': const Home_CG_Terminale(),
+  };
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +42,43 @@ class _Home_CGState extends State<Home_CG> {
               color: Colors.white,
             ),
           ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: allLevel.keys.map((school) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: SizedBox(
+                width: 360,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: principale_color,
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  ),
+                  onPressed: () {
+                    String abbreviation = allLevel[school]!;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => concoursWidgets[abbreviation]!),
+                    );
+                  },
+                  child: Center(
+                    child: Text(
+                      school,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }).toList(),
         ),
       ),
     );

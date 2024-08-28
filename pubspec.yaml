@@ -64,16 +64,21 @@ flutter:
     - assets/epreuves/excellence/concours_general/premiere/italien/
     - assets/epreuves/excellence/concours_general/premiere/latin/
     - assets/epreuves/excellence/concours_general/premiere/maths/
+    - assets/epreuves/excellence/concours_general/premiere/physique/
     - assets/epreuves/excellence/concours_general/premiere/portugais/
 
 
     - assets/epreuves/excellence/concours_general/terminale/citoyennete/
+    - assets/epreuves/excellence/concours_general/terminale/comptabilite/
     - assets/epreuves/excellence/concours_general/terminale/economie/
     - assets/epreuves/excellence/concours_general/terminale/electronique/
     - assets/epreuves/excellence/concours_general/terminale/geographie/
     - assets/epreuves/excellence/concours_general/terminale/histoire/
     - assets/epreuves/excellence/concours_general/terminale/islamiques/
     - assets/epreuves/excellence/concours_general/terminale/maths/
+    - assets/epreuves/excellence/concours_general/terminale/philosophie/
+    - assets/epreuves/excellence/concours_general/terminale/physique/
+    - assets/epreuves/excellence/concours_general/terminale/svt/
 
   uses-material-design: true
 

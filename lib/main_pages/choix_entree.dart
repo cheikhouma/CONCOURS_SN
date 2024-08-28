@@ -1,10 +1,6 @@
+import 'package:Concours_SN/entree_pages/entree_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:Concours_SN/main_pages/constantes.dart';
-import 'package:Concours_SN/entree_pages/ept.dart'; // Import the widget for EPT
-import 'package:Concours_SN/entree_pages/esp.dart'; // Import the widget for ESP
-import 'package:Concours_SN/entree_pages/ensa.dart'; // Import the widget for ENSA
-import 'package:Concours_SN/entree_pages/ipsl.dart'; // Import the widget for IPSL
-import 'package:Concours_SN/entree_pages/pd.dart'; // Import the widget for PD
 
 class ChoixEntree extends StatefulWidget {
   const ChoixEntree({super.key});
@@ -15,20 +11,52 @@ class ChoixEntree extends StatefulWidget {
 
 class _ChoixEntreeState extends State<ChoixEntree> {
   Map<String, String> allSchools = {
-    'École Polytechnique de Thiés': 'ept',
-    'École Supérieure Polytechnique': 'esp',
-    'École Nationale Supérieure de l\'Agronomie': 'ensa',
-    'Institut Polytechnique de Saint Louis': 'ipsl',
-    'Polytech Diamniadio': 'pd'
+    'École Nationale Supérieure de l\'Agronomie': 'ENSA',
+    'École Polytechnique de Thiés': 'EPT',
+    'École Supérieure Polytechnique': 'ESP',
+    'Institut Polytechnique de Saint Louis': 'IPSL',
+    'Polytech Diamniadio': 'PD'
   };
 
   // Map abbreviations to widgets
-  final Map<String, Widget> schoolWidgets = {
-    'ept': const Home_EPT(),
-    'esp': const Home_ESP(),
-    'ensa': const Home_ENSA(),
-    'pd': const Home_PD(),
-    'ipsl': const Home_IPSL()
+  final Map<String, List> schoolDates = {
+    'ENSA': [
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2018",
+      "2019",
+      "2021",
+      "2022",
+      "2023",
+    ],
+    'EPT': [
+      "2007",
+      "2008",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021"
+    ],
+    'ESP': [],
+    'PD': [],
+    'IPSL': []
+  };
+  final Map<String, String> schoolFIleName = {
+    'ENSA': 'ensa',
+    'EPT': 'ept',
+    'ESP': 'esp',
+    'PD': 'pd',
+    'IPSL': 'ipsl'
   };
 
   @override
@@ -56,40 +84,48 @@ class _ChoixEntreeState extends State<ChoixEntree> {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: allSchools.keys.map((school) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: SizedBox(
-                width: 360, // Set the desired uniform width here
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: principale_color,
-                    padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  ),
-                  onPressed: () {
-                    String abbreviation = allSchools[school]!;
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => schoolWidgets[abbreviation]!),
-                    );
-                  },
-                  child: Center(
-                    child: Text(
-                      school,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                        fontFamily: 'Poppins',
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: allSchools.keys.map((school) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: SizedBox(
+                  width: 360, // Set the desired uniform width here
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: principale_color,
+                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    ),
+                    onPressed: () {
+                      String abbreviation = allSchools[school]!;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => EntreeViewer(
+                            allDates: schoolDates[abbreviation]!,
+                            school: abbreviation,
+                            pdffilename:
+                                "assets/epreuves/entree/${schoolFIleName[abbreviation]}/$abbreviation",
+                          ),
+                        ),
+                      );
+                    },
+                    child: Center(
+                      child: Text(
+                        school,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontFamily: 'Poppins',
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            );
-          }).toList(),
+              );
+            }).toList(),
+          ),
         ),
       ),
     );

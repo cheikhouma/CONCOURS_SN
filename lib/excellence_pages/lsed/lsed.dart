@@ -32,7 +32,7 @@ class _Home_LSEDState extends State<Home_LSED> {
         ),
         title: const Center(
           child: Text(
-            "ÉPREUVES LSED",
+            "Épreuves LSED",
             style: TextStyle(
               fontFamily: "Poppins",
               fontSize: 20,
