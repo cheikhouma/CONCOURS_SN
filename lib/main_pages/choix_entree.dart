@@ -11,6 +11,7 @@ class ChoixEntree extends StatefulWidget {
 
 class _ChoixEntreeState extends State<ChoixEntree> {
   Map<String, String> allSchools = {
+    'École Militaire de Santé': 'EMS',
     'École Nationale Supérieure de l\'Agronomie': 'ENSA',
     'École Polytechnique de Thiés': 'EPT',
     'École Supérieure Polytechnique': 'ESP',
@@ -20,6 +21,12 @@ class _ChoixEntreeState extends State<ChoixEntree> {
 
   // Map abbreviations to widgets
   final Map<String, List> schoolDates = {
+    'EMS': [
+      '2013',
+      '2014',
+      '2015',
+      '2016',
+    ],
     'ENSA': [
       "2011",
       "2012",
@@ -52,6 +59,7 @@ class _ChoixEntreeState extends State<ChoixEntree> {
     'IPSL': []
   };
   final Map<String, String> schoolFIleName = {
+    'EMS': 'ems',
     'ENSA': 'ensa',
     'EPT': 'ept',
     'ESP': 'esp',
