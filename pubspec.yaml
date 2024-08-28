@@ -25,11 +25,25 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/foreground.png"
+  adaptive_icon_foreground: "assets/icon.png"
+
+
+
 
 
 # The following section is specific to Flutter packages.
 flutter:
   assets:
+
+    # Assets de l'icon
+    - assets/ 
     # Assets des concours d'entree
     - assets/epreuves/entree/ept/
     - assets/epreuves/entree/ensa/
