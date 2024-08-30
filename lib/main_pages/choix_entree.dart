@@ -10,72 +10,78 @@ class ChoixEntree extends StatefulWidget {
 }
 
 class _ChoixEntreeState extends State<ChoixEntree> {
-  Map<String, String> allSchools = {
-    'École Militaire de Santé': 'EMS',
-    'École Nationale Supérieure de l\'Agronomie': 'ENSA',
-    'École Polytechnique de Thiés': 'EPT',
-    'École Supérieure Polytechnique': 'ESP',
-    'Institut Polytechnique de Saint Louis': 'IPSL',
-    'Polytech Diamniadio': 'PD'
-  };
-
-  // Map abbreviations to widgets
-  final Map<String, List> schoolDates = {
-    'EMS': [
-      '2013',
-      '2014',
-      '2015',
-      '2016',
-    ],
-    'ENSA': [
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2018",
-      "2019",
-      "2021",
-      "2022",
-      "2023",
-    ],
-    'EPT': [
-      "2007",
-      "2008",
-      "2010",
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2016",
-      "2017",
-      "2018",
-      "2019",
-      "2020",
-      "2021"
-    ],
-    'ESP': [],
-    'PD': [],
-    'IPSL': []
-  };
-  final Map<String, String> schoolFIleName = {
-    'EMS': 'ems',
-    'ENSA': 'ensa',
-    'EPT': 'ept',
-    'ESP': 'esp',
-    'PD': 'pd',
-    'IPSL': 'ipsl'
-  };
+  List<SchoolInfo> schools = [
+    SchoolInfo(
+      name: 'École Militaire de Santé',
+      abbreviation: 'EMS',
+      dates: ["2013", "2014", "2015", "2016"],
+      fileName: 'ems',
+    ),
+    SchoolInfo(
+      name: 'École Nationale Supérieure de l\'Agronomie',
+      abbreviation: 'ENSA',
+      dates: [
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2018",
+        "2019",
+        "2021",
+        "2022",
+        "2023"
+      ],
+      fileName: 'ensa',
+    ),
+    SchoolInfo(
+      name: 'École Polytechnique de Thiès',
+      abbreviation: 'EPT',
+      dates: [
+        "2007",
+        "2008",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021"
+      ],
+      fileName: 'ept',
+    ),
+    SchoolInfo(
+      name: 'École Supérieure Polytechnique',
+      abbreviation: 'ESP',
+      dates: ["2016", "2017", "2018"],
+      fileName: 'esp',
+    ),
+    SchoolInfo(
+      name: 'Institut Polytechnique de Saint Louis',
+      abbreviation: 'IPSL',
+      dates: ["2018", "2020", "2022"],
+      fileName: 'ipsl',
+    ),
+    SchoolInfo(
+      name: 'Polytech Diamniadio',
+      abbreviation: 'PD',
+      dates: [],
+      fileName: 'pd',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back,
-              color: white), // Change color to black
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Navigator.pop(context); // Navigate back to the previous page
+            Navigator.pop(context);
           },
         ),
         backgroundColor: principale_color,
@@ -95,7 +101,7 @@ class _ChoixEntreeState extends State<ChoixEntree> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: allSchools.keys.map((school) {
+            children: schools.map((schoolInfo) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: SizedBox(
@@ -106,22 +112,21 @@ class _ChoixEntreeState extends State<ChoixEntree> {
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
                     ),
                     onPressed: () {
-                      String abbreviation = allSchools[school]!;
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => EntreeViewer(
-                            allDates: schoolDates[abbreviation]!,
-                            school: abbreviation,
+                            allDates: schoolInfo.dates,
+                            school: schoolInfo.abbreviation,
                             pdffilename:
-                                "assets/epreuves/entree/${schoolFIleName[abbreviation]}/$abbreviation",
+                                "assets/epreuves/entree/${schoolInfo.fileName}/${schoolInfo.abbreviation}",
                           ),
                         ),
                       );
                     },
                     child: Center(
                       child: Text(
-                        school,
+                        schoolInfo.name,
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 17,
@@ -138,4 +143,18 @@ class _ChoixEntreeState extends State<ChoixEntree> {
       ),
     );
   }
+}
+
+class SchoolInfo {
+  final String name;
+  final String abbreviation;
+  final List<String> dates;
+  final String fileName;
+
+  SchoolInfo({
+    required this.name,
+    required this.abbreviation,
+    required this.dates,
+    required this.fileName,
+  });
 }

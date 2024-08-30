@@ -74,7 +74,7 @@ class _EntreeViewerState extends State<EntreeViewer> {
                       child: InkWell(
                         onTap: () {
                           Colors.black;
-
+                          print("${widget.pdffilename}_$date.pdf");
                           Navigator.push(
                             context,
                             PageRouteBuilder(
