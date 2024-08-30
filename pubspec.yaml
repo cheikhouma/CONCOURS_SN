@@ -27,6 +27,8 @@ dev_dependencies:
   flutter_lints: ^3.0.0
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.4.1
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
 
 flutter_icons:
   android: true
@@ -45,6 +47,7 @@ flutter:
     # Assets de l'icon
     - assets/ 
     # Assets des concours d'entree
+    - assets/epreuves/entree/ems/
     - assets/epreuves/entree/ept/
     - assets/epreuves/entree/ensa/
     - assets/epreuves/entree/esp/
