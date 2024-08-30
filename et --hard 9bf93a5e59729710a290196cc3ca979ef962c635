@@ -1,0 +1,89 @@
+[33mcommit 9d4c93868d274339ea8fb8bf51f726baf142da3b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Fri Aug 30 10:54:14 2024 +0000
+
+    Structures des bd
+
+[33mcommit 9bf93a5e59729710a290196cc3ca979ef962c635[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Wed Aug 28 17:39:07 2024 +0000
+
+    EMS
+
+[33mcommit 78933d8ff6124e1b94ea37244dc5eaa325ed933d[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Wed Aug 28 17:03:40 2024 +0000
+
+    dossier viewer
+
+[33mcommit 003582eb51f9ef02a6a12eeff249398525e0414d[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Wed Aug 28 16:56:30 2024 +0000
+
+    Splash screen and logo
+
+[33mcommit 5e148d8745b26fc29be9fd5f4a14853a1586a02e[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Wed Aug 28 12:14:46 2024 +0000
+
+    Algo unique d'affichage
+
+[33mcommit e24c58128eaaa12799d474ed5e46610da1cd0f48[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Sun Aug 25 07:44:59 2024 +0000
+
+    AJout cg part1
+
+[33mcommit 4d26aed9a85af6d20f5570fe37273d2f8cc204d3[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Fri Aug 23 22:01:30 2024 +0000
+
+    AJout du Bottom Appbar en blanc
+
+[33mcommit b552a86efd5502f82176329c061637a5def67eaf[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Fri Aug 23 21:44:22 2024 +0000
+
+    Ajout d'epreuves et de pages
+
+[33mcommit 7bedd10d24d29a79c9caba4d6b44140cb2c30806[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Thu Aug 22 15:52:58 2024 +0000
+
+    Version avec choix des choix
+
+[33mcommit bdf6ed4e5e41ed0ce38750d25446c21a68d801eb[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Wed Aug 21 18:58:40 2024 +0000
+
+    chnging test folder
+
+[33mcommit 1d3f1550c112c9f14bfa1bb50d40029563af4879[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Wed Aug 21 18:57:15 2024 +0000
+
+    changement de couleur
+
+[33mcommit 780ff28044d16bd0b6e6fdf3faa361a237cd0ccc[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Sun Aug 18 07:54:50 2024 +0000
+
+    resolving some bugs
+
+[33mcommit fb36ef9d913d89a7385a07f5b543719517f2f367[m
+Author: Cheikh Oumar DIALLO <dcheikhoumar@ept.sn>
+Date:   Sun Aug 18 07:20:30 2024 +0000
+
+    Last version
+
+[33mcommit fe4ecab96c471c949e510fecddd3b82fe2fad9e9[m
+Author: Cheikh Oumar DIALLO <88355786+cheikhouma@users.noreply.github.com>
+Date:   Fri Apr 26 11:43:56 2024 +0000
+
+    fix the bug
+
+[33mcommit 38621deec795d97df61fff0e74ec8532acd047ac[m
+Author: Cheikh Oumar DIALLO <88355786+cheikhouma@users.noreply.github.com>
+Date:   Mon Apr 15 18:14:20 2024 +0000
+
+    Initial commit
