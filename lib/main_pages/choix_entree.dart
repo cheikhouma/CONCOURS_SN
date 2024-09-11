@@ -65,13 +65,7 @@ class _ChoixEntreeState extends State<ChoixEntree> {
       abbreviation: 'IPSL',
       dates: ["2018", "2020", "2022"],
       fileName: 'ipsl',
-    ),
-    SchoolInfo(
-      name: 'Polytech Diamniadio',
-      abbreviation: 'PD',
-      dates: [],
-      fileName: 'pd',
-    ),
+    )
   ];
 
   @override
