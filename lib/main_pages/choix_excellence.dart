@@ -1,6 +1,5 @@
 import 'package:Concours_SN/excellence_pages/cg/cg.dart';
 import 'package:Concours_SN/excellence_pages/jp/jp.dart';
-import 'package:Concours_SN/excellence_pages/lsed/lsed.dart';
 import 'package:Concours_SN/main_pages/constantes.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +21,6 @@ class _ChoixExcellenceState extends State<ChoixExcellence> {
   final Map<String, Widget> concoursWidgets = {
     'cg': const Home_CG(),
     'jp': const Home_JP(),
-    'lsed': const Home_LSED()
   };
 
   @override

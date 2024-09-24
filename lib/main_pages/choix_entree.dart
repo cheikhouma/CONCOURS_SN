@@ -14,7 +14,12 @@ class _ChoixEntreeState extends State<ChoixEntree> {
     SchoolInfo(
       name: 'École Militaire de Santé',
       abbreviation: 'EMS',
-      dates: ["2013", "2014", "2015", "2016"],
+      dates: [
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+      ],
       fileName: 'ems',
     ),
     SchoolInfo(
@@ -65,7 +70,19 @@ class _ChoixEntreeState extends State<ChoixEntree> {
       abbreviation: 'IPSL',
       dates: ["2018", "2020", "2022"],
       fileName: 'ipsl',
-    )
+    ),
+    SchoolInfo(
+        name: "Lycée d'Excellence de Diourel",
+        abbreviation: "LSED",
+        dates: [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2021",
+          "2022",
+        ],
+        fileName: 'lsed')
   ];
 
   @override
